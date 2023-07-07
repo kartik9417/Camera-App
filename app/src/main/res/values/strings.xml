@@ -1,0 +1,26 @@
+<resources>
+    <string name="app_name">My Application</string>
+    <string name="capture_button">Capture Button</string>
+    <string name="flip_button">Flip Button</string>
+    <string name="flash_button">Flash Button</string>
+    <string name="photo">Photo</string>
+    <string name="video">Video</string>
+    <string name="text">Text</string>
+    <string name="drawing">Drawing</string>
+    <string name="stickers">Stickers</string>
+    <string name="add_text">Text</string>
+    <string name="draw">Draw</string>
+    <string name="add_stickers">Stickers</string>
+    <string name="done">Done</string>
+    <string name="loading">Loading</string>
+    <string name="red">red</string>
+    <string name="blue">blue</string>
+    <string name="pink">pink</string>
+    <string name="yellow">yellow</string>
+    <string name="black">black</string>
+    <string name="white">white</string>
+    <string name="enter_text_here">Enter Text Here</string>
+    <string name="save">Save</string>
+    <string name="_0s">0s</string>
+    <string name="_0sec">0s</string>
+</resources>

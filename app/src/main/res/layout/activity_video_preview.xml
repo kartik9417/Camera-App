@@ -1,0 +1,173 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context="com.camera.cameraApp.PreviewActivity">
+
+    <androidx.camera.view.PreviewView
+        android:id="@+id/videoViewFinder"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <androidx.constraintlayout.widget.Guideline
+        android:id="@+id/videoHeightRatioGuideline"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:layout_constraintGuide_percent="0.67" />
+
+    <ImageView
+        android:id="@+id/videoImageView"
+        android:layout_width="match_parent"
+        android:layout_height="150dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="@+id/videoHeightRatioGuideline"
+        app:srcCompat="@drawable/camera_container" />
+
+
+    <ImageButton
+        android:id="@+id/video1"
+        android:layout_width="0dp"
+        android:layout_height="25dp"
+        android:background="@drawable/right_selected"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toEndOf="@+id/photo1"
+        app:layout_constraintTop_toTopOf="@+id/videoImageView" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:paddingHorizontal="10dp"
+        android:text="@string/video"
+        android:textColor="@color/yellow"
+        app:layout_constraintBottom_toBottomOf="@+id/video1"
+        app:layout_constraintEnd_toEndOf="@+id/video1"
+        app:layout_constraintStart_toStartOf="@+id/video1"
+        app:layout_constraintTop_toTopOf="@+id/video1" />
+
+    <ImageButton
+        android:id="@+id/photo1"
+        android:layout_width="0dp"
+        android:layout_height="25dp"
+        android:background="@drawable/left_unselected"
+        app:layout_constraintEnd_toStartOf="@+id/video1"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintHorizontal_chainStyle="packed"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="@+id/videoImageView" />
+
+    <TextView
+        android:id="@+id/textView"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:paddingHorizontal="10dp"
+        android:text="@string/photo"
+        android:textColor="@color/white"
+        app:layout_constraintBottom_toBottomOf="@+id/photo1"
+        app:layout_constraintEnd_toStartOf="@+id/video1"
+        app:layout_constraintStart_toStartOf="@+id/photo1"
+        app:layout_constraintTop_toTopOf="@+id/photo1" />
+
+    <ImageButton
+        android:id="@+id/videoCaptureButton"
+        android:layout_width="80dp"
+        android:layout_height="80dp"
+        android:background="?attr/selectableItemBackgroundBorderless"
+        android:contentDescription="@string/capture_button"
+        android:scaleType="centerCrop"
+        android:src="@drawable/record_start"
+        app:layout_constraintBottom_toBottomOf="@+id/videoImageView"
+        app:layout_constraintEnd_toEndOf="@+id/videoImageView"
+        app:layout_constraintStart_toStartOf="@+id/videoImageView"
+        app:layout_constraintTop_toTopOf="@+id/videoImageView" />
+
+    <ImageButton
+        android:id="@+id/videoFlipButton"
+        android:layout_width="35dp"
+        android:layout_height="35dp"
+        android:background="?attr/selectableItemBackgroundBorderless"
+        android:contentDescription="@string/flip_button"
+        android:scaleType="centerCrop"
+        android:src="@drawable/camera_flip_button"
+        app:layout_constraintBottom_toBottomOf="@+id/videoCaptureButton"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toEndOf="@+id/videoCaptureButton"
+        app:layout_constraintTop_toTopOf="@+id/videoCaptureButton" />
+
+
+    <ImageView
+        android:id="@+id/imageView2"
+        android:layout_width="70dp"
+        android:layout_height="70dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:srcCompat="@drawable/camera_container" />
+
+    <ImageView
+        android:id="@+id/timerView"
+        android:layout_width="70dp"
+        android:layout_height="40dp"
+        android:layout_margin="10dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:srcCompat="@drawable/camera_container" />
+
+    <TextView
+        android:id="@+id/timerTextView"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/_0s"
+        android:textColor="@color/white"
+        android:textSize="20sp"
+        app:layout_constraintBottom_toBottomOf="@+id/timerView"
+        app:layout_constraintEnd_toStartOf="@+id/videoViewFinder"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toEndOf="@+id/imageButton2"
+        app:layout_constraintTop_toTopOf="@+id/timerView" />
+
+    <ImageButton
+        android:id="@+id/imageButton2"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:background="?attr/selectableItemBackgroundBorderless"
+        android:src="@drawable/recording_circle"
+        app:layout_constraintBottom_toBottomOf="@+id/timerView"
+        app:layout_constraintEnd_toStartOf="@+id/timerTextView"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toEndOf="@+id/videoViewFinder"
+        app:layout_constraintTop_toTopOf="@+id/timerView" />
+
+    <ImageButton
+        android:id="@+id/videoFlashLightButton"
+        android:layout_width="35dp"
+        android:layout_height="35dp"
+        android:layout_margin="20dp"
+        android:background="?attr/selectableItemBackgroundBorderless"
+        android:contentDescription="@string/flash_button"
+        android:scaleType="centerCrop"
+        android:src="@drawable/camera_flash_off"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="@+id/videoViewFinder" />
+
+    <ImageButton
+        android:id="@+id/galleryButton"
+        android:layout_width="35dp"
+        android:layout_height="35dp"
+        android:background="?attr/selectableItemBackgroundBorderless"
+        android:contentDescription="@string/flash_button"
+        android:scaleType="centerCrop"
+        android:src="@drawable/gallery_vector"
+        app:layout_constraintBottom_toBottomOf="@+id/videoCaptureButton"
+        app:layout_constraintEnd_toStartOf="@+id/videoCaptureButton"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="@+id/videoCaptureButton" />
+</androidx.constraintlayout.widget.ConstraintLayout>
